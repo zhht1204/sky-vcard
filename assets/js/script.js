@@ -49,10 +49,6 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
 }
 
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
