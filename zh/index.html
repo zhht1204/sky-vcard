@@ -23,6 +23,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Additional custom styles for Chinese version */
+    .certificate-info h4 {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    
+    .certificate-info p {
+      margin-top: 5px;
+      opacity: 0.9;
+    }
+  </style>
 </head>
 
 <body>
@@ -128,19 +141,25 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="https://github.com/zhht1204" class="social-link">
+            <a href="https://space.bilibili.com/106569" class="social-link" target="_blank">
+              <ion-icon src="../assets/images/icon-bilibili.svg" alt="Bilibili icon"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/zhht1204" class="social-link" target="_blank">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="https://x.com/zhht1204" class="social-link">
+            <a href="https://x.com/zhht1204" class="social-link" target="_blank">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="https://wb.zhtlovelp.homes" class="social-link">
+            <a href="https://wb.zhtlovelp.homes" class="social-link" target="_blank">
               <ion-icon name="logo-mastodon"></ion-icon>
             </a>
           </li>
@@ -170,7 +189,7 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>关于我</button>
+            <button class="navbar-link active" data-nav-link>关于我</button>
           </li>
 
           <li class="navbar-item">
@@ -244,10 +263,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
+                <h4 class="h4 service-item-title">Web架构设计</h4>
 
                 <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                  写代码和设计不止是我的主业，也是我日常喜欢做和学的事。从底层（单片机机器人和NFC类技术）到高层（Web应用和云计算和大数据等），我都乐于探索和实践。当然Web相关的最熟练。
                 </p>
               </div>
 
@@ -256,14 +275,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="../assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <img src="../assets/images/icon-acg.svg" alt="ACG icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">ACG</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  初中时从零之使魔入坑，那时刚播第二季。<br/>游戏玩<b style="color: #FFDB6E">LOL</b>和各种单机（主Galgame）。<br/>LOL各个区都有号，还有日服号，水平大概白金。同好可以一起大乱斗开黑😀。
                 </p>
               </div>
 
@@ -272,14 +291,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="../assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <img src="../assets/images/icon-guitar.svg" alt="Guitar icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
+                <h4 class="h4 service-item-title">音乐</h4>
 
                 <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                  喜欢吉他指弹，也练弹唱和电吉他。还有钢琴和唱歌。讲道理水平都还行。有兴趣可以看看B站主页或微信交流👻。
                 </p>
               </div>
 
@@ -288,14 +307,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="../assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <img src="../assets/images/icon-camera.svg" alt="camera icon" width="40">
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">摄影</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  不承接商业活动。私人活动/朋友结婚之类的个人感觉还是拍得可以的。可见微博（Mastodon）。
                 </p>
               </div>
 
@@ -382,7 +401,7 @@
               </div>
             </li>
 
-            <li class="testimonials-item">
+            <li (class="testimonials-item">
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
@@ -591,7 +610,7 @@
 
               <h4 class="h4 timeline-item-title">上海哔哩哔哩科技有限公司</h4>
 
-              <span>2020.08 — 2020.10</span>
+              <span>2020.08 — 2022.10</span>
 
               <p class="timeline-text">
                 高级开发工程师<br>
@@ -627,11 +646,11 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">前端开发 (React/Vue)</h5>
-                <data value="90">90%</data>
+                <data value="90">80%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
+                <div class="skill-progress-fill" style="width: 80%;"></div>
               </div>
 
             </li>
@@ -652,7 +671,7 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">数据库与存储</h5>
+                <h5 class="h5">数据分析/大数据</h5>
                 <data value="80">80%</data>
               </div>
 
@@ -681,9 +700,175 @@
 
       </article>
 
+      <article class="resume" data-page="证书">
 
+        <header>
+          <h2 class="h2 article-title">证书</h2>
+        </header>
 
+        <section class="certificates">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
 
+            <h3 class="h3">校外/社会证书</h3>
+          </div>
+          
+          <div class="certificate-carousel">
+            <div class="carousel-container">
+              <div class="carousel-slides">
+                <div class="carousel-slide">
+                  <img src="https://vip.123pan.cn/1837611370/yk6baz03t0n000d7w33gzxkejmr9zsj6DIYwAwQPDID0DcxPDqUvAY==.jpeg" alt="JTest认证" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">JTest 准B级</h4>
+                    <p>2013年 | 日本語検定協会/中国人力资源和社会保障部</p>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <img src="https://vip.123pan.cn/1837611370/yk6baz03t0m000d7w33g71gemtb9smqkDIYwAwQPDID0DcxPDqUvAY==.jpg" alt="JTest认证" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">论文一作录用</h4>
+                    <p>2017年 | 电脑迷杂志</p>
+                  </div>
+                </div>
+                
+                <div class="carousel-slide">
+                  <img src="https://vip.123pan.cn/1837611370/ymjew503t0m000d7w32xp9jwlsb65zzuDIYwAwQPDID0DcxPDqUvAY==.jpg" alt="JTest认证" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">职业资格证书 JAVA三级</h4>
+                    <p>2017年 | 中国人力资源和社会保障部</p>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <img src="https://vip.123pan.cn/1837611370/ymjew503t0m000d7w32xp9jw14b64cdsDIYwAwQPDID0DcxPDqUvAY==.jpeg" alt="JTest认证" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">第六届蓝桥杯全国软件和信息技术专业人才大赛上海赛区JAVA软件开发大学A组二等奖</h4>
+                    <p>2015年 | 各相关协会</p>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <img src="https://vip.123pan.cn/1837611370/ymjew503t0n000d7w32y5g0p9fqshkm5DIYwAwQPDID0DcxPDqUvAY==.jpeg" alt="JTest认证" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">第七届蓝桥杯全国软件和信息技术专业人才大赛上海赛区JAVA软件开发大学A组三等奖</h4>
+                    <p>2016年 | 各相关协会</p>
+                  </div>
+                </div>
+
+                <div class="carousel-slide active">
+                  <img src="https://vip.123pan.cn/1837611370/yk6baz03t0l000d7w33fdddu7uw165o6DIYwAwQPDID0DcxPDqUvAY==.jpg" alt="AWS Certified Solutions Architect" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">英语四级</h4>
+                    <p>2014年 | 中国教育部</p>
+                  </div>
+                </div>
+                
+                <div class="carousel-slide">
+                  <img src="https://vip.123pan.cn/1837611370/yk6baz03t0n000d7w33gzxkcr0r9xz6cDIYwAwQPDID0DcxPDqUvAY==.jpg" alt="CCNA认证" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">英语六级</h4>
+                    <p>2014年 | 中国教育部</p>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="carousel-btn prev-btn">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </button>
+              <button class="carousel-btn next-btn">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </button>
+              
+              <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+                <span class="dot" data-index="5"></span>
+                <span class="dot" data-index="6"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="certificates">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">校内奖状</h3>
+          </div>
+          
+          <div class="certificate-carousel">
+            <div class="carousel-container">
+              <div class="carousel-slides">
+                <div class="carousel-slide active">
+                  <img src="https://vip.123pan.cn/1837611370/yk6baz03t0n000d7w33gzxkdmcr9ygm8DIYwAwQPDID0DcxPDqUvAY==.jpeg" alt="短期交流生毕业证书" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">上海市高等学校计算机等级考试证书</h4>
+                    <p>2014年</p>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <img src="https://vip.123pan.cn/1837611370/ymjew503t0n000d7w32y5fsi4eqbxy1xDIYwAwQPDID0DcxPDqUvAY==.jpg" alt="短期交流生毕业证书" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">日本短期交流生毕业证书</h4>
+                    <p>2016年</p>
+                  </div>
+                </div>
+                
+                <div class="carousel-slide">
+                  <img src="https://vip.123pan.cn/1837611370/yk6baz03t0l000d7w33fdcyb4gvkm2mlDIYwAwQPDID0DcxPDqUvAY==.jpeg" alt="大二第二学期 博学奖" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">大二第二学期 博学奖</h4>
+                    <p>2015年</p>
+                    <p>(P.S.话说这还名字给我写错了😓)</p>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <img src="https://vip.123pan.cn/1837611370/yk6baz03t0n000d7w33gzx5alnqtfa5pDIYwAwQPDID0DcxPDqUvAY==.jpeg" alt="大二第二学期_卓越奖" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">大二第二学期 卓越奖</h4>
+                    <p>2015年</p>
+                  </div>
+                </div>
+
+                <div class="carousel-slide">
+                  <img src="https://vip.123pan.cn/1837611370/ymjew503t0l000d7w32x7o8t3sv36i84DIYwAwQPDID0DcxPDqUvAY==.jpeg" alt="大一第二学期 博学奖" class="certificate-img">
+                  <div class="certificate-info">
+                    <h4 class="h4">大一第二学期 博学奖</h4>
+                    <p>2014年</p>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <button class="carousel-btn prev-btn">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </button>
+              <button class="carousel-btn next-btn">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </button>
+              
+              <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </article>
 
       <!--
         - #PORTFOLIO
@@ -1141,21 +1326,21 @@
 
         <section class="contact-form">
 
-          <h3 class="h3 form-title">Contact Form</h3>
+          <h3 class="h3 form-title">发送邮件</h3>
 
           <form action="mailto:zhht1204@gmail.com" method="post" enctype="text/plain" class="form">
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder="昵称" required data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email" required data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder="想对我说" required data-form-input></textarea>
 
             <button class="form-btn" type="submit" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
+              <span>发送邮件</span>
             </button>
 
           </form>
