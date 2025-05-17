@@ -487,9 +487,24 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+/* Language switch button */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.lang-switch {
+  color: var(--orange-yellow-crayola);
+  font-size: 1.5rem;
+  margin-left: 10px;
+  margin-right: 20px;
+  transition: 0.25s ease;
+}
 
-
+.lang-switch:hover {
+  color: var(--light-gray);
+}
 
 /*-----------------------------------*\
   #ABOUT
@@ -1403,7 +1418,6 @@ main {
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(1) invert(1);
 }
 
 .contact-form { margin-bottom: 10px; }
