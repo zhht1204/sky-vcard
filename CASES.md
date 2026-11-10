@@ -65,13 +65,31 @@ GET https://www.zhtlovelp.space/en/index.html → 200（与 /en 同内容）
 - `index.html`（meta refresh 兜底页）：同样补 canonical 与 hreflang，让任何残留入口都归一到 `/zh`。
 - 站内语言切换链接由 `/en/`、`/zh/` 改为 `/en`、`/zh`：**内部链接、重定向目标、canonical、sitemap 四者统一为同一种 URL 形态**（无尾斜杠）。
 - 新增 `robots.txt`（`Allow: /` + `Sitemap:` 指向）与 `sitemap.xml`（只列 `/zh`、`/en` 两个权威 URL，并用 `xhtml:link` 互相声明语言版本）。
+- `vercel.json` 开启 `"cleanUrls": true` + `"trailingSlash": false`，把 `/zh/`、`/zh/index.html`、`/en/`、`/en/index.html` 在 **HTTP 层**直接 308 到权威 URL，而不是只靠 canonical 收敛（改动前实测这些路径均返回 200 同内容）。
 - `README.md` 增补「部署与 URL 约定」小节，把 URL 形态与 canonical 规则固化下来，并写明本站不接入 Sky SSO。
 
 ### 验证 (Verification)
 
-- 本地静态检查：`zh/index.html` / `en/index.html` / `index.html` 的 canonical + hreflang 齐备且 href 自指正确；`robots.txt`、`sitemap.xml` 新增成功，sitemap 内 URL 与 canonical 完全一致。
-- 线上基线（修复前实测）：Vercel 308 链不变；`/zh` 与 `/en` 仍 200。
-- 待重新部署后复测：`view-source https://www.zhtlovelp.space/zh` 应能看到 canonical；并在 GSC「网址检查」对 `https://www.zhtlovelp.space/zh` 提交「请求索引」。报告条目通常在 1–2 个抓取周期后消失。
+已提交（`9bf3d11`）并推送 `origin/master`，Vercel 自动部署后线上实测：
+
+```
+GET https://zhtlovelp.space/                 → 308  Location: https://www.zhtlovelp.space/
+GET https://www.zhtlovelp.space/             → 308  Location: /zh
+GET https://www.zhtlovelp.space/zh           → 200
+GET https://www.zhtlovelp.space/zh/          → 308  Location: /zh
+GET https://www.zhtlovelp.space/zh/index.html → 308  Location: /zh
+GET https://www.zhtlovelp.space/en           → 200
+GET https://www.zhtlovelp.space/en/          → 308  Location: /en
+GET https://www.zhtlovelp.space/en/index.html → 308  Location: /en
+GET https://www.zhtlovelp.space/index.html   → 308  Location: /     （跟随后最终落在 /zh，200）
+GET https://www.zhtlovelp.space/robots.txt   → 200
+GET https://www.zhtlovelp.space/sitemap.xml  → 200  Content-Type: application/xml
+```
+
+- `/zh` 与 `/en` 线上 `<head>` 已含 `canonical` 与三条 `hreflang`（zh-Hans / en / x-default），自指正确。
+- 站内语言切换链接线上为 `/en` 与 `/zh`（无尾斜杠），与 308 目标、canonical、sitemap 四者一致。
+- `sitemap.xml` 线上可解析，只含 `/zh`、`/en` 两个 URL 且带 `xhtml:link` 互链；`robots.txt` 线上已指向该 sitemap。
+- 剩余动作（需账号操作）：在 GSC「网址检查」对 `https://www.zhtlovelp.space/zh` 提交「请求索引」，报告条目通常在 1–2 个抓取周期后消失。
 
 ### 教训 (Lesson / Reusable Conclusion)
 
