@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# 权威 URL 只有一个裸域入口 + 两个语言版本，其余路径（/、/index.html、/zh/、/zh/index.html 等）
+# 由 308 / canonical 收敛，不再单独提交。
+Sitemap: https://www.zhtlovelp.space/sitemap.xml
